@@ -2,9 +2,61 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Hello</title>
 </head>
 <body>
-$END$
+<script>
+    //1.khởi tạo có 3 tham số truyền vào//
+    let MyDate= function (day, month, year) {
+        this.day = day;
+        this.month = month;
+        this.year = year;
+        //2.xay dung phuong thuc tra ve ngay, thang, nam//
+        this.getDay = function () {
+            return this.day;
+            //lay 1 Element (day) trong function tren//
+        }
+        this.getMonth = function () {
+            return this.month;
+        }
+        this.getYear = function () {
+            return this.year;
+        }
+        //3. xay dung phuong thuc thiet dat lai gia tri cac thuoc tinh day, month, year//
+        this.setDay = function (day) {
+            this.day = day;
+        }
+        this.setMonth = function (month) {
+            this.month = month;
+        }
+        this.setYear = function (year) {
+            this.year = year;
+        }
+
+        this.getDate = function () {
+            let date = this.day + "/" + this.month + "/" + this.year;
+        }
+        // 4: Sử dụng lớp vừa tạo. Tạo đối tượng date với ngày:2, tháng:2, năm: 2007 //
+
+    };
+    let date = new MyDate (2,2,2007);
+
+    //5: Truy cập phương thức của lớp date như sau//
+    date.setDay(10);
+    date.setMonth(10);
+    date.setYear(2019);
+    let day = date.getDay(); // 2
+
+    let month = date.getMonth(); // 2
+
+    let year = date.getYear(); // 2007
+
+    alert(day + "/" + month + "/" + year);
+
+
+
+
+
+</script>
 </body>
 </html>
